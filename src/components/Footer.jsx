@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
             </div>
             <p className="mx-auto mt-10 max-w-7xl border-t border-slate-800 pt-5 font-nunito text-xs text-slate-400">
-                © {new Date().getFullYear()} ProperEstate. Hak cipta dilindungi.
+                © 2026 ProperEstate. Hak cipta dilindungi.
             </p>
         </footer>
     );

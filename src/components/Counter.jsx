@@ -1,5 +1,4 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
 
 export default function Counter({ from = 0, to = 100 }) {
   const count = useMotionValue(from);

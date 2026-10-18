@@ -38,7 +38,7 @@ export default function App() {
     <>
       <main className="relative overflow-x-hidden">
         <div id="beranda" className=" relative   h-160 md:h-130 w-full  rounded-t-sm font-comfortaa ">
-        <img loading="eager" className="fixed w-full max-h-160 h-full object-cover z-0" src="/Hero_bg.webp"/>
+        <img loading="eager" alt="Latar Belakang" className="fixed w-full max-h-160 h-full object-cover z-0" src="/Hero_bg.webp"/>
         {/* Header yang berisi navigasi  */}
           <div className="p-5  top-0 relative left-0 z-2 text-white w-full flex justify-between items-center ">
             {/* Logo  */}
