@@ -2,19 +2,16 @@ import { Bath, BedDouble, MoveRight } from "lucide-react";
 import { motion } from "motion/react";
 
 const properties = [
-    { name: "Rumah Modern Minimalis", price: "Rp 850 juta", area: "120 m²", bedrooms: 3, bathrooms: 2, image: "photo-1512917774080-9991f1c4c750" },
-    { name: "Rumah Asri dekat Taman", price: "Rp 1,2 miliar", area: "160 m²", bedrooms: 4, bathrooms: 3, image: "photo-1600596542815-ffad4c1539a9" },
-    { name: "Hunian Nyaman Keluarga", price: "Rp 720 juta", area: "96 m²", bedrooms: 3, bathrooms: 2, image: "photo-1600607687939-ce8a6c25118c" },
-    { name: "Rumah Elegan 2 Lantai", price: "Rp 1,8 miliar", area: "210 m²", bedrooms: 5, bathrooms: 4, image: "photo-1600607687920-4e2a09cf159d" },
-    { name: "Rumah Compact Modern", price: "Rp 630 juta", area: "84 m²", bedrooms: 2, bathrooms: 2, image: "photo-1600566753086-00f18fb6b3ea" },
-    { name: "Rumah Klasik Asri", price: "Rp 980 juta", area: "135 m²", bedrooms: 3, bathrooms: 2, image: "photo-1600585154340-be6161a56a0c" },
-    { name: "Rumah Keluarga Premium", price: "Rp 2,4 miliar", area: "280 m²", bedrooms: 5, bathrooms: 4, image: "photo-1600047509807-ba8f99d2cdde" },
-    { name: "Rumah Hangat Minimalis", price: "Rp 1,4 miliar", area: "110 m²", bedrooms: 3, bathrooms: 2, image: "photo-1600566753190-17f0baa2a6c3" },
+    { name: "Apartemen 80 Lantai", price: "Rp 2 triliun", area: "120.000 m²", bedrooms: 300, bathrooms: 600, image: "/properties/Gedung80lantai.jpg" },
+    { name: "Rumah Klasik", price: "Rp 1,2 miliar", area: "160 m²", bedrooms: 4, bathrooms: 3, image: "/properties/Rumahklasik.jpg" },
+    { name: "Rumah Mini Modern", price: "Rp 720 juta", area: "96 m²", bedrooms: 3, bathrooms: 2, image: "/properties/RumahMini.jpg" },
+    { name: "Rumah Kayu Klasik", price: "Rp 1,8 miliar", area: "210 m²", bedrooms: 5, bathrooms: 4, image:  "/properties/RumahKayu.jpg" },
+   
 ];
 
 export default function CatalogSection() {
     return (
-        <section id="katalog" className="bg-stone-50 px-6 py-16 md:py-20 lg:px-16">
+        <section id="katalog" className="bg-stone-50 px-6 py-16 md:py-20 lg:px-16 ">
             <div className="mx-auto max-w-7xl">
                 <div className="mb-8 flex flex-col gap-3 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
                     <div>
@@ -30,7 +27,7 @@ export default function CatalogSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 ">
                     {properties.map((property, index) => (
                         <motion.article
                             key={property.name}
@@ -38,14 +35,14 @@ export default function CatalogSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.4, delay: (index % 4) * 0.08 }}
-                            className="group overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="group overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg max-w-75"
                         >
-                            <div className="relative overflow-hidden">
+                            <div className="relative overflow-hidden w-75 h-50">
                                 <img
-                                    src={`https://images.unsplash.com/${property.image}?auto=format&fit=crop&w=800&q=80`}
+                                    src={property.image}
                                     alt={property.name}
                                     loading="lazy"
-                                    className="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-105"
+                                    className="  w-75 h-50 object-cover transition duration-500 group-hover:scale-105"
                                 />
                                 <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 font-nunito text-xs font-bold text-slate-700 backdrop-blur">
                                     Dijual
